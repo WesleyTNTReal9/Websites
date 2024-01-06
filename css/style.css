@@ -1,0 +1,561 @@
+/*
+Theme Name: Betheme Child
+Theme URI: https://themes.muffingroup.com/betheme
+Author: TMS Devs
+Author URI: https://muffingroup.com
+Description: Child Theme for Betheme
+Template: betheme
+Version: 3.1.2
+*/
+
+/* Hide Site when JS is disabled */
+html.no-js body #Wrapper {
+  display: none !important;
+}
+
+/* Styles for global noscript tag */
+html.no-js body noscript section.js-disabled--content {
+  background: white;
+  color: black;
+  margin: 30px auto;
+  padding: 0 15px 30px 15px;
+  width: 100%;
+  max-width: 800px;
+}
+
+html.no-js body noscript section.js-disabled--anchors {
+  margin-bottom: 30px;
+  column-count: 3;
+  column-gap: 15px;
+}
+
+html.no-js body noscript section.js-disabled--anchors a {
+  display: block;
+  font-size: 16px;
+}
+
+html.no-js body noscript br {
+  content: "";
+  margin: 2em;
+  display: block;
+  font-size: 50%;
+}
+
+html.no-js body noscript h2 {
+  font-size: 48px;
+  line-height: 48px;
+  color: #DB0007;
+}
+
+html.no-js .js-disabled--error-text {
+  font-size: 16px;
+}
+
+html.no-js .js-disabled--continue--button {
+  padding: 16px 24px;
+  background: linear-gradient(358.56deg, #FFBC0D -21.59%, rgba(255, 188, 13, 0) 103.17%), #FFBC0D;
+  background-blend-mode: multiply, normal;
+  border: 2px solid #FF9900;
+  border-radius: 243px;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  color: black;
+}
+
+html.no-js .js-disabled--wrapper {
+  display: block;
+  max-width: 90%;
+}
+
+html.no-js a {
+  color: #006BAE;
+}
+
+.lottie-intro-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: white;
+  pointer-events: none;
+  z-index: 2000;
+  opacity: 1;
+  -webkit-transition: opacity 1000ms linear;
+  transition: opacity 1000ms linear;
+}
+
+/* INPUT BASED LANGUAGE SELECTOR */
+#language-selector-wrapper {
+  position: fixed;
+  top: 15px;
+  right: 8px;
+  z-index: 1000;
+  opacity: 0;
+  -webkit-transition: opacity 1000ms linear;
+  transition: opacity 1000ms linear;
+}
+
+#language-selector {
+  background: #f4be42 url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI3LjMuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyMCAyMCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjAgMjA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRkZGRkZGO30KCS5zdDF7ZmlsbDojQzYyQzFEO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTEwLDQuNGMtMy4xLDAtNS42LDIuNS01LjYsNS42czIuNSw1LjYsNS42LDUuNnM1LjYtMi41LDUuNi01LjZTMTMuMSw0LjQsMTAsNC40eiIvPgo8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTAsMEM0LjUsMCwwLDQuNSwwLDEwczQuNSwxMCwxMCwxMHMxMC00LjUsMTAtMTBTMTUuNSwwLDEwLDB6IE01LjMsOS40Yy0wLjQtMC40LTAuNC0xLDAtMS4zCgljMC40LTAuNCwxLTAuNCwxLjMsMGwzLjQsMy40bDMuNC0zLjRjMC40LTAuNCwxLTAuNCwxLjMsMGMwLjQsMC40LDAuNCwxLDAsMS4zbC00LjEsNC4xYy0wLjQsMC40LTEsMC40LTEuMywwTDUuMyw5LjR6Ii8+Cjwvc3ZnPgo=") no-repeat right 5px top 55%;
+  background-size: 30px;
+  border-radius: 30px;
+  color: black;
+  font-family: "Speedee Wide Bold", Verdana, sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+#language-selector:focus{
+  box-shadow: 0 0 0 4px white;
+}
+
+#language-selector option {
+  padding-left: 5px;
+}
+
+body.admin-bar #language-selector-wrapper {
+  top: 55px;
+}
+
+@media screen and (min-width: 782px) {
+  body.admin-bar #language-selector-wrapper {
+    top: 45px;
+  }
+}
+
+/* STANDARD WP MENU VERSION OF LANGUAGE SELECTOR */
+
+.mfn-header-tmpl.mfn-header-tmpl-default {
+  pointer-events: none;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+body.admin-bar .mfn-header-tmpl.mfn-header-tmpl-default {
+  top: 45px;
+}
+
+@media screen and (min-width: 782px) {
+  body.admin-bar .mfn-header-tmpl.mfn-header-tmpl-default {
+    top: 31px;
+  }
+}
+
+.mfn-header-menu {
+  padding: 15px 8px;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.25));
+}
+
+/* Bug Fix for right aligned menu in main navigation */
+.mfn-header-menu > .mfn-menu-li .mfn-submenu {
+  left: auto !important;
+  right: 0;
+}
+
+/* Language Selector */
+.mfn-header-menu > .menu-item-type-wpml_ls_menu_item {
+  width: 220px;
+}
+
+.mfn-header-menu > .menu-item-type-wpml_ls_menu_item > .mfn-menu-link > .menu-sub {
+  margin-left: auto !important;
+}
+
+.rtl .mfn-header-menu > .menu-item-type-wpml_ls_menu_item > .mfn-menu-link > .menu-sub {
+  margin-left: 0 !important;
+}
+
+.mfn-header-menu > .wpml-ls-menu-item {
+  background-color: #f4be42;
+  border-radius: 30px;
+}
+
+.rtl .mfn-header-menu > .wpml-ls-menu-item .label-wrapper {
+  margin-right: auto;
+}
+
+.mfn-header-menu .menu-item {
+  pointer-events: all;
+}
+
+.mfn-header-menu > .wpml-ls-menu-item.mfn-li-hover {
+  border-radius: 20px 20px 0 0;
+}
+
+.mfn-header-menu > .wpml-ls-menu-item .mfn-submenu {
+  background-color: #f4be42;
+  border-radius: 0 0 20px 20px;
+  max-height: 90vh;
+  overflow: scroll;
+}
+
+.mfn-header-menu .wpml-ls-menu-item > .mfn-menu-link {
+  font-family: "Speedee Wide Bold", Verdana, sans-serif;
+  font-weight: bold;
+  color: black;
+  padding: 4px 4px 4px 20px;
+}
+
+.rtl .mfn-header-menu .wpml-ls-menu-item > .mfn-menu-link {
+  padding: 4px 4px 4px 4px;
+}
+
+.rtl .mfn-header-menu .wpml-ls-menu-item > .mfn-menu-link .label-wrapper {
+  padding: 4px 4px 4px 10px;
+}
+
+.mfn-header-menu > .wpml-ls-menu-item.wpml-ls-current-language > .mfn-menu-link > .mfn-menu-subicon {
+  background: #c62c1d;
+  color: #f4be42;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1000px;
+  transition: scaleY 150ms linear;
+}
+
+.mfn-header-menu > .wpml-ls-menu-item.wpml-ls-current-language.mfn-li-hover > .mfn-menu-link > .mfn-menu-subicon {
+  transform: scaleY(-1);
+}
+
+.mfn-header-menu > .wpml-ls-menu-item.wpml-ls-current-language > .mfn-menu-link > .mfn-menu-subicon > i {
+  font-size: 15px;
+}
+
+/* CONTENT BLOCK */
+/* this is just to make sure we have some preset height when the area is empty */
+#Content {
+  min-height: 50vh;
+}
+
+/* Global button styles font override, since it just picks up the content font */
+a.button {
+  font-family: "Speedee Wide Bold", Verdana, sans-serif;
+  font-weight: bold;
+}
+
+/* Cookie Banner Styles since they do not seem to work from the interface */
+#mfn-gdpr .mfn-gdpr-button {
+  font-family: "Speedee Wide Bold", Verdana, sans-serif;
+  font-weight: bold;
+  color: black;
+  background-color: #f4be42;
+  text-transform: uppercase;
+}
+
+#mfn-gdpr .mfn-gdpr-button:hover {
+  color: black;
+  background-color: #b48e33;
+}
+
+#mfn-gdpr a.mfn-gdpr-readmore:hover {
+  color: black;
+}
+
+/* ERROR 404 STYLES */
+
+#Error_404 {
+  width: 514px;
+  margin-top: 0;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  box-shadow: 0px 0px 120px rgba(0, 0, 0, 0.2);
+  border-radius: 48px;
+}
+
+#Error_404 .mcb-column-inner {
+  position: relative;
+  margin: 10%;
+}
+
+#Error_404 .error_pic {
+  float: none;
+  text-align: left;
+}
+
+#Error_404 .error_pic i {
+  font-size: 135px;
+  line-height: 135px;
+}
+
+.icon-attention:before {
+  content: '\e810';
+  color: #ecc05a;
+}
+
+#Error_404 .error_desk {
+  width: 100%;
+  float: none;
+  padding-top: 0;
+}
+
+#Error_404 .error_desk h2 {
+  font-size: 48px;
+  line-height: 48px;
+  color: #DB0007;
+}
+
+#Error_404 .error_desk h4 {
+  width: 80%;
+  color: #484948;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Speedee Wide regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+#Error_404 .error_desk p .check {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 15px;
+  float: left;
+  color: #484948;
+}
+
+#Error_404 .error_desk p .button {
+  float: left;
+  margin: 20px 0 40px;
+  padding: 16px 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(358.56deg, #FFBC0D -21.59%, rgba(255, 188, 13, 0) 103.17%), #FFBC0D;
+  background-blend-mode: multiply, normal;
+  border: 2px solid #FF9900;
+  border-radius: 243px;
+  text-transform: capitalize;
+  font-size: 16px;
+  clear: left;
+}
+
+#Error_404 [class^="icon-"]:before, [class*=" icon-"]:before {
+  margin-left: 0;
+}
+
+#error_footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #C92A20;
+}
+
+#error_footer svg {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* #Desktop	960 - 1239 ---------------------------------------------------------------------------------- #Desktop	960 - 1239 */
+@media only screen and (min-width: 960px) and (max-width: 1239px) {
+  #Error_404 .error_pic i {
+    font-size: 135px;
+    line-height: 135px;
+  }
+}
+
+/* #Tablet (Landscape) 768 - 959 --------------------------------------------------------------- #Tablet (Landscape) 768 - 959 */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  #Error_404 {
+    width: 514px;
+    position: relative;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  #Error_404 .error_pic {
+    width: 100%;
+    float: none;
+  }
+
+  #Error_404 .error_pic i {
+    font-size: 135px;
+    line-height: 135px;
+  }
+
+  #Error_404 .error_desk {
+    text-align: left;
+    width: 100%;
+    float: none;
+    padding-top: 0;
+  }
+
+  #Error_404 .error_desk p .check {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    float: left;
+  }
+}
+
+/* #Tablet (Portrait) & Mobile < 768 ------------------------------------------------------- #Tablet (Portrait) & Mobile < 768 */
+@media only screen and (max-width: 767px) {
+  #Error_404 {
+    box-shadow: none;
+    border-radius: 0;
+    width: 100%;
+    position: relative;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  #Error_404 .error_pic {
+    width: 100%;
+    float: none;
+  }
+
+  #Error_404 .error_pic i {
+    font-size: 9em;
+    line-height: 1em;
+  }
+
+  #Error_404 .error_desk {
+    width: 100%;
+    float: none;
+    padding-top: 0;
+    text-align: left;
+  }
+
+  #Error_404 .error_desk h2 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  #Error_404 .error_desk p .check {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    float: left;
+  }
+}
+
+/* ======================================== START: OVERLAY LOGOS ====================================== */
+/* -- START: Global Overlay Styles -- */
+/* -- Background Overlay is placing the translated logos over the background images -- */
+
+/* #Desktop	960 - 1239 ---------------------------------------------------------------------------------- #Desktop	960 - 1239 */
+@media only screen and (min-width: 960px) {
+  body.parent-pageid-8 .mcb-background-overlay {
+    background-position: center 40px !important; /* unfortunately neccessary to have the !important on this */
+    background-size: 500px;
+  }
+}
+/* #Tablet (Landscape) 768 - 959 --------------------------------------------------------------- #Tablet (Landscape) 768 - 959 */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  body.parent-pageid-8 .mcb-background-overlay {
+    background-position: center 40px !important; /* unfortunately neccessary to have the !important on this */
+    background-size: 360px;
+  }
+}
+/* # Mobile < 768 ------------------------------------------------------- #Tablet (Portrait) & Mobile < 768 */
+@media only screen and (max-width: 767px) {
+  body.parent-pageid-8 .mcb-background-overlay {
+    background-position: center 20vw !important; /* unfortunately neccessary to have the !important on this */
+    background-size: 110vw;
+  }
+}
+
+/* BG Scaling breaks when screen is less than 326 width */
+@media only screen and (max-width: 325px) {
+  body.parent-pageid-8 .mcb-background-overlay {
+    background-position: center 65px !important; /* unfortunately neccessary to have the !important on this */
+    background-size: 360px;
+  }
+}
+/* -- END: Global Overlay Styles -- */
+
+/* These Promos use Overlay Logos, but only use the global styling:
+    - Guardians of the Galaxy
+    - The Little Mermaid
+-- */
+
+/* -- START: Elemental -- */
+@media only screen and (min-width: 960px) {
+  body.page-em27454 .mcb-background-overlay {
+    background-position: center bottom 200px !important;
+    background-size: 400px;
+  }
+}
+/* #Tablet (Landscape) 768 - 959 --------------------------------------------------------------- #Tablet (Landscape) 768 - 959 */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  body.page-em27454 .mcb-background-overlay {
+    background-position: center bottom 134px !important;
+    background-size: 300px;
+  }
+}
+/* # Mobile < 768 ------------------------------------------------------- #Tablet (Portrait) & Mobile < 768 */
+@media only screen and (max-width: 767px) {
+  body.page-em27454 .mcb-background-overlay {
+    background-position: center bottom 110px !important; /* unfortunately neccessary to have the !important on this */
+    background-size: 60vw;
+  }
+}
+/* BG Scaling breaks when screen is less than 326 width */
+@media only screen and (max-width: 325px) {
+  body.page-em27454 .mcb-background-overlay {
+    background-position: center bottom 110px !important; /* unfortunately neccessary to have the !important on this */
+    background-size: 60vw;
+  }
+}
+/* -- END: Elemental -- */
+
+/* -- START: The Marvels: mv27474 -- */
+@media only screen and (min-width: 960px) {
+  body.page-mv27474 .mcb-background-overlay {
+    background-position: center 40px !important; /* unfortunately neccessary to have the !important on this */
+    background-size: 330px;
+  }
+}
+/* # Mobile < 768 ------------------------------------------------------- #Tablet (Portrait) & Mobile < 768 */
+@media only screen and (max-width: 767px) {
+  body.page-mv27474 .mcb-background-overlay {
+    background-position: center 5vh !important; /* unfortunately neccessary to have the !important on this */
+    background-size: 75vw;
+  }
+}
+/* BG Scaling breaks when screen is less than 326 width */
+@media only screen and (max-width: 325px) {
+  body.page-mv27474 .mcb-background-overlay {
+    background-position: center 5vh !important; /* unfortunately neccessary to have the !important on this */
+    background-size: 75vw;
+  }
+}
+/* BG Over-Scaling begins when screen is greater than 1080 width */
+@media only screen and (min-width: 1079px) {
+  body.page-mv27474 .mcb-background-overlay {
+    background-size: 25vw;
+  }
+}
+/* -- END: The Marvels: mv27474 -- */
+/* ======================================== END: OVERLAY LOGOS ======================================== */
+
+
+/* ======================================== START: RATINGS BUG ======================================== */
+/* -- Ratings Badge -- */
+.hmpu-rating-badge img { max-width: 75px; width: 50px; margin-left: 0; }
+
+.lm27014-rating-badge { padding-left: 180px; }
+.lm27014-rating-badge img { width: 70px; }
+
+/* # Mobile < 768 ------------------------------------------------------- #Tablet (Portrait) & Mobile < 768 */
+@media only screen and (max-width: 767px) {
+  .lm27014-rating-badge { padding-left: 112px; }
+  .lm27014-rating-badge img { width: 56px; }
+}
+@media only screen and (max-width: 356px) {
+  .hmpu-rating-badge img { width: 42px; margin-left: -10px; }
+}
+/* ======================================== END: RATINGS BUG ========================================== */
+
+
